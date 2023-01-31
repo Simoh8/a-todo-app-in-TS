@@ -1,0 +1,17 @@
+This code is a JavaScript code that is used to implement a streak feature in a web application. The code starts by importing the interface StreakItem from the file "./interfaces/taskInterface". This line is importing an interface that contains definitions of properties that are going to be used in this code.
+
+Next, it selects several HTML elements from the DOM (Document Object Model) by their ids and assigns them to corresponding JavaScript variables. The DOM is a tree-like structure that represents the HTML document and allows access to its elements.
+
+Then, it defines an interface named Streak which has three properties, name, image, and date.
+
+After that, the code sets the display property of the modal to none, which means it is hidden on the page.
+
+The code then creates a class named Streaks, which is used to create, display, and delete streaks. It has several methods:
+
+createStreak(): this method adds the passed streak object to the myStreaks property, which is an array of streaks, and then calls the displayStreak() method.
+displayStreak(): this method displays all streaks in the myStreaks property in a div element named streakcard. It first empties the innerHTML of streakcard, then maps over all streaks in the myStreaks property and creates a div element for each streak and appends it to the streakcard.
+displayOne(): this method displays a single streak in the modal div element. It first empties the innerHTML of the modal, then creates several HTML elements to display the name, image, and date of the passed streak, and adds buttons for close and delete.
+deleteStreak(): this method removes the streak from the myStreaks property by using the splice method.
+The code then creates another class named TimeDifference with a single static method start(), which is currently empty.
+
+Finally, the code creates instances of Streaks and sets event listeners for the submit button and addBtn button. The submit button submits the form and adds a new streak to the myStreaks property. The addBtn button displays the form.
